@@ -1,0 +1,8 @@
+{
+  "products": [
+    {"name":"Face Brushes","description":"Foundation, powder, blush, contour and concealer shapes.","image":"images/e02.png","published":true},
+    {"name":"Eye Brushes","description":"Blending, packing, liner, detail and brow shapes.","image":"images/e05.png","published":true},
+    {"name":"Brush Sets","description":"Ready-to-customize edits from 4 to 24 pieces.","image":"images/set-eight.png","published":true},
+    {"name":"Custom Packaging","description":"Pouches, gift boxes, travel cases and retail cartons.","image":"images/set-everyday.png","published":true}
+  ]
+}

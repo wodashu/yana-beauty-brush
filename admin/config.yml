@@ -1,0 +1,31 @@
+backend:
+  name: github
+  repo: wodashu/yana-beauty-brush
+  branch: main
+  base_url: https://auth.yanabeautybrush.com
+  auth_endpoint: auth
+
+media_folder: images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: catalog
+    label: Product Catalog
+    files:
+      - name: products
+        label: Product Categories
+        file: data/products.json
+        format: json
+        fields:
+          - label: Products
+            name: products
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - {label: Product Name, name: name, widget: string}
+              - {label: Short Description, name: description, widget: text}
+              - {label: Product Image, name: image, widget: image}
+              - {label: Video URL, name: video_url, widget: string, required: false}
+              - {label: MOQ, name: moq, widget: string, required: false}
+              - {label: Materials, name: materials, widget: text, required: false}
+              - {label: Published, name: published, widget: boolean, default: true}
