@@ -2,7 +2,7 @@ backend:
   name: github
   repo: wodashu/yana-beauty-brush
   branch: main
-  base_url: https://auth.yanabeautybrush.com
+  base_url: https://auth.yanabrushr.com
   auth_endpoint: auth
 
 media_folder: images/uploads
