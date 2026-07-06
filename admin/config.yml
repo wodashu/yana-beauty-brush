@@ -10,22 +10,24 @@ public_folder: /images/uploads
 
 collections:
   - name: catalog
-    label: Product Catalog
+    label: 产品管理
     files:
       - name: products
-        label: Product Categories
+        label: 产品列表
         file: data/products.json
         format: json
         fields:
-          - label: Products
+          - label: 产品
             name: products
             widget: list
             summary: "{{fields.name}}"
+            label_singular: 产品
+            add_to_top: true
             fields:
-              - {label: Product Name, name: name, widget: string}
-              - {label: Short Description, name: description, widget: text}
-              - {label: Product Image, name: image, widget: image}
-              - {label: Video URL, name: video_url, widget: string, required: false}
-              - {label: MOQ, name: moq, widget: string, required: false}
-              - {label: Materials, name: materials, widget: text, required: false}
-              - {label: Published, name: published, widget: boolean, default: true}
+              - {label: 产品名称, name: name, widget: string, hint: 请填写英文产品名称，网站面向全球客户}
+              - {label: 产品简介, name: description, widget: text, hint: 请用英文简要介绍产品特点和用途}
+              - {label: 产品图片, name: image, widget: image, hint: 建议上传清晰的正方形或竖版产品图}
+              - {label: 产品视频链接（选填）, name: video_url, widget: string, required: false, hint: 可填写 YouTube、Vimeo 或视频文件链接}
+              - {label: 最低起订量 MOQ（选填）, name: moq, widget: string, required: false, hint: 例如 500 sets 或 1000 pcs}
+              - {label: 产品材质（选填）, name: materials, widget: text, required: false, hint: 例如 Synthetic hair / Aluminum ferrule / FSC wood handle}
+              - {label: 是否在网站展示, name: published, widget: boolean, default: true, hint: 打开表示展示，关闭表示暂时隐藏}
